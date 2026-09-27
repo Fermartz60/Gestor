@@ -26,7 +26,7 @@ export default function ThemeToggle({ onThemeChange }: ThemeToggleProps) {
     try { localStorage.setItem('balance.theme', next ? 'dark' : 'light'); setError(false) }
     catch { setError(true) }
   }
-  return <div className="flex flex-col gap-1">
+  return <div className="flex shrink-0 flex-col gap-1">
     <div className="flex h-11 w-[68px] items-center justify-center">
     <label className="switch origin-center scale-75" title="Alternar modo oscuro">
       <input className="switch__input" type="checkbox" role="switch" aria-label="Modo oscuro" checked={dark} onChange={event => toggle(event.target.checked)} />
